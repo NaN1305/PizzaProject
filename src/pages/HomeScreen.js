@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 Icon.loadFont();
 
@@ -27,6 +27,7 @@ function Homes({ navigation }) {
         <Text style={styles.whatyouwanttxt}>Choose what you</Text>
         <Text style={styles.whatyouwanttxt2}>want to eat today!</Text>
       </View>
+      <ScrollView>
       <View style={styles.cardboard}>
       <Image style={styles.pizzas}
           source={require('../../assets/pepperoni.png')}
@@ -107,6 +108,87 @@ function Homes({ navigation }) {
           <Icon style={styles.addtocart} name="add-box" />
         </View>
       </View>
+      <View style={styles.cardboard}>
+      <Image style={styles.pizzas}
+          source={require('../../assets/cali.png')}
+        />
+        <View>
+          <Text style={styles.saborpizza}>California Pizza</Text>
+          <View style={styles.rating}>
+            <Text>4.5</Text>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star-half"/>
+          </View>
+          <Text style={styles.valorpizza}>R$: 59,99</Text>
+        </View>
+        <View>
+          <Icon style={styles.addtocart} name="add-box" />
+        </View>
+      </View>
+      <View style={styles.cardboard}>
+      <Image style={styles.pizzas}
+          source={require('../../assets/cali.png')}
+        />
+        <View>
+          <Text style={styles.saborpizza}>California Pizza</Text>
+          <View style={styles.rating}>
+            <Text>4.5</Text>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star-half"/>
+          </View>
+          <Text style={styles.valorpizza}>R$: 59,99</Text>
+        </View>
+        <View>
+          <Icon style={styles.addtocart} name="add-box" />
+        </View>
+      </View>
+      <View style={styles.cardboard}>
+      <Image style={styles.pizzas}
+          source={require('../../assets/cali.png')}
+        />
+        <View>
+          <Text style={styles.saborpizza}>California Pizza</Text>
+          <View style={styles.rating}>
+            <Text>4.5</Text>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star-half"/>
+          </View>
+          <Text style={styles.valorpizza}>R$: 59,99</Text>
+        </View>
+        <View>
+          <Icon style={styles.addtocart} name="add-box" />
+        </View>
+      </View>
+      <View style={styles.cardboard1}>
+      <Image style={styles.pizzas}
+          source={require('../../assets/cali.png')}
+        />
+        <View>
+          <Text style={styles.saborpizza}>California Pizza</Text>
+          <View style={styles.rating}>
+            <Text>4.5</Text>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star"/>
+            <Icon name="star-half"/>
+          </View>
+          <Text style={styles.valorpizza}>R$: 59,99</Text>
+        </View>
+        <View>
+          <Icon style={styles.addtocart} name="add-box" />
+        </View>
+      </View>
+      </ScrollView>
     </View>
     
   );
@@ -181,6 +263,18 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+
+  cardboard1: {
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    width: 340,
+    borderRadius: 12,
+    marginTop: 20,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 20,
   },
 
   saborpizza: {

@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 Icon.loadFont();
 
@@ -22,6 +22,7 @@ function Cart({ navigation }) {
           </View>
         </View>
         <Text style={styles.whatyouwanttxt3}>Resumo do Pedido:</Text>
+        <ScrollView>
         <View style={styles.cardboard}>
         <Image style={styles.pizzas}
             source={require('../../assets/marg.png')}
@@ -62,19 +63,118 @@ function Cart({ navigation }) {
             <Icon style={styles.addtocart} name="done" />
           </View>
         </View>
+        <View style={styles.cardboard}>
+        <Image style={styles.pizzas}
+            source={require('../../assets/pros.png')}
+          />
+          <View>
+            <Text style={styles.saborpizza}>Prosciutto Pizza</Text>
+            <View style={styles.rating}>
+              <Text>4.5</Text>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star-half"/>
+            </View>
+            <Text style={styles.valorpizza}>R$: 89,99</Text>
+          </View>
+          <View>
+            <Icon style={styles.addtocart} name="done" />
+          </View>
+        </View>
+        <View style={styles.cardboard}>
+        <Image style={styles.pizzas}
+            source={require('../../assets/pros.png')}
+          />
+          <View>
+            <Text style={styles.saborpizza}>Prosciutto Pizza</Text>
+            <View style={styles.rating}>
+              <Text>4.5</Text>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star-half"/>
+            </View>
+            <Text style={styles.valorpizza}>R$: 89,99</Text>
+          </View>
+          <View>
+            <Icon style={styles.addtocart} name="done" />
+          </View>
+        </View>
+        <View style={styles.cardboard}>
+        <Image style={styles.pizzas}
+            source={require('../../assets/pros.png')}
+          />
+          <View>
+            <Text style={styles.saborpizza}>Prosciutto Pizza</Text>
+            <View style={styles.rating}>
+              <Text>4.5</Text>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star-half"/>
+            </View>
+            <Text style={styles.valorpizza}>R$: 89,99</Text>
+          </View>
+          <View>
+            <Icon style={styles.addtocart} name="done" />
+          </View>
+        </View>
+        <View style={styles.cardboard}>
+        <Image style={styles.pizzas}
+            source={require('../../assets/pros.png')}
+          />
+          <View>
+            <Text style={styles.saborpizza}>Prosciutto Pizza</Text>
+            <View style={styles.rating}>
+              <Text>4.5</Text>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star-half"/>
+            </View>
+            <Text style={styles.valorpizza}>R$: 89,99</Text>
+          </View>
+          <View>
+            <Icon style={styles.addtocart} name="done" />
+          </View>
+        </View>
+        <View style={styles.cardboard}>
+        <Image style={styles.pizzas}
+            source={require('../../assets/pros.png')}
+          />
+          <View>
+            <Text style={styles.saborpizza}>Prosciutto Pizza</Text>
+            <View style={styles.rating}>
+              <Text>4.5</Text>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star"/>
+              <Icon name="star-half"/>
+            </View>
+            <Text style={styles.valorpizza}>R$: 89,99</Text>
+          </View>
+          <View>
+            <Icon style={styles.addtocart} name="done" />
+          </View>
+        </View>
+        </ScrollView>
         <View style={styles.footer}>
         <Image style={styles.pizzas}
             source={require('../../assets/marg.png')}
           />
           <View style={{ flex: 1, marginLeft: 15,}}>
-            <Text style={styles.pizzasesc}>Pizzas escolhidas:</Text>
-            <Text style={styles.sabesc}>Margherita</Text>
-            <Text style={styles.sabesc}>Prosciutto</Text>
+            <Text style={styles.pizzasesc}>Total:</Text>
+            <Text style={{ color: "#fff", marginLeft: 20, marginBottom: 5, marginTop: 5,}}>(1x59,99 + 6x89,99)</Text>
+            <Text style={styles.valorresumo}>R$: 509,94</Text>
           </View>
-            <Text style={styles.valorresumo}>R$: 89,99</Text>
+          </View>
         </View>
-        {/* CREATE VIEW */}
-      </View>
     );
   }
 
@@ -189,8 +289,8 @@ function Cart({ navigation }) {
     },
 
     valorresumo: {
-        marginLeft: 260,
-        marginTop: 50,
+        marginLeft: 20,
+        marginTop: 65,
         fontSize: 25,
         fontWeight: "bold",
         position: "absolute",
