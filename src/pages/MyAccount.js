@@ -1,49 +1,18 @@
-import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import {
-    DrawerContentScrollView,
-    DrawerItem
-} from '@react-navigation/drawer';
+import 'react-native-gesture-handler';
+import React from 'react';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 Icon.loadFont();
 
-export function DrawerContent({ navigation }) {
+function MyAccount({ navigation }) {
     return(
-        <View style={styles.container}>
-            <View style={styles.headerdrawer}>
-            <Icon style={styles.profpicdrawer} name="account-circle"/>
-            <View>
-            <Text style={styles.textdrawerh}>Bem vindo,</Text>
-            <Text style={styles.textdrawerhn}>Enzo Pascucci</Text>
-            </View>
-            </View>
-            <TouchableOpacity style={styles.buttondrawer}
-                onPress={() => navigation.navigate("MyAccount")}
-            >
-                <Icon style={styles.icondrawer} name="account-box"/>
-                <Text style={styles.textdrawer}>Minha Conta</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buttondrawer}
-                onPress={() => navigation.navigate("Home")}
-            >
-                <Icon style={styles.icondrawer} name="home"/>
-                <Text style={styles.textdrawer}>Home</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buttondrawer}
-                onPress={() => navigation.navigate('Cart')}
-            >
-                <Icon style={styles.icondrawer} name="shopping-cart"/>
-                <Text style={styles.textdrawer}>Cart</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.buttondrawer}
-                onPress={() => navigation.navigate('Cart')}
-            >
-                <Icon style={styles.icondrawer} name="subdirectory-arrow-left"/>
-                <Text style={styles.textdrawer}>Sign Out</Text>
-            </TouchableOpacity>
+        <View style={StyleSheet.container}>
+
         </View>
     );
 }
+
+export default MyAccount;
 
 const styles = StyleSheet.create({
     container: {

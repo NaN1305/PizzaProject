@@ -9,7 +9,7 @@ function Cart({ navigation }) {
       <View style={styles.container}>
         <View style={styles.header}>
           <Icon style={styles.iconebars} name="reorder"
-            
+            onPress={() => navigation.openDrawer()}
           />
           <Image 
             style={{ width: 60, height: 60}}
